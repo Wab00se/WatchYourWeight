@@ -1,0 +1,38 @@
+ViewManager:
+   RegistrationView:
+
+<RegistrationView>:
+   name: "registration"
+   GridLayout:
+      cols: 2
+      size: root.width, root.height
+
+      Image:
+         source:"assets/logo.png"
+         pos_hint: {"center_x": 0.67, "center_y": 0.4}
+      Label:
+         text:'Willkommen'
+
+      Label:
+         text:'Gewünschter Username'
+      TextInput:
+         id: username
+         text:''
+
+      Label:
+         text:'Email:'
+      TextInput:
+         id: mail
+         text:''
+
+      Label:
+         text:'Gewünschtes Passwort:'
+      TextInput:
+         id: password
+         text:''
+
+      Button:
+         text:'Zurück'
+         on_press: root.manager.current = 'welcome'
+      Button:
+         text:'Nächster Schritt'
